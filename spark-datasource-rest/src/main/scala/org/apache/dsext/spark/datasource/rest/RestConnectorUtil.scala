@@ -142,11 +142,11 @@ object RestConnectorUtil {
     val outArrB : ArrayBuffer[String] = new ArrayBuffer[String](keysLength)
 
     while (cnt < keysLength) {
-        outArrB += URLEncoder.encode(keys(cnt)) + "=" + URLEncoder.encode(values(cnt))
+        outArrB += URLEncoder.encode(values(cnt))
         cnt += 1
     }
 
-    outArrB.mkString("&")
+    outArrB.mkString("/")
 
   }
 
